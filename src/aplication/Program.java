@@ -1,7 +1,11 @@
 package aplication;
 
+import model.entities.*;
+import model.entities.enums.Color;
+
 public class Program {
 	public static void main(String[] args) {
-		System.out.println("Hello, world!");
+		Board board = new Board();
+		System.out.println(board);
 	}
 }
