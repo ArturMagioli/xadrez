@@ -25,15 +25,19 @@ public class Board {
 		for (int i = 0; i < 8; i++) {
 			piece[0][i] = new Pawn(Color.WHITE, 0, i);
 			piece[1][i] = new Pawn(Color.WHITE, 1, i);
-			piece[6][i] = new Pawn(Color.WHITE, 6, i);
-			piece[7][i] = new Pawn(Color.WHITE, 7, i);
+			piece[6][i] = new Pawn(Color.BLACK, 6, i);
+			piece[7][i] = new Pawn(Color.BLACK, 7, i);
 		}
 	}
+	
+	
 	
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
+		
 		for (int i = 0; i < 8; i++) {
+			sb.append(8 - i + " ");
 			for (int j = 0; j < 8; j++) {
 				if (piece[i][j] != null) {
 					sb.append(piece[i][j] + "  ");
@@ -43,6 +47,12 @@ public class Board {
 				}
 			}
 			sb.append("\n");
+		}
+		
+		char letra = 97;
+		for (int i = 0; i < 8; i++) {
+			sb.append("  " + letra);
+			letra++;
 		}
 		return sb.toString();
 	}
