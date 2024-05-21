@@ -30,7 +30,11 @@ public class Board {
 		}
 	}
 	
-	
+	public void refreshBoard(int oldPositionX, int oldPositionY, int newPositionX, int newPositionY) {
+		piece[oldPositionX][oldPositionY].movement(newPositionX, newPositionY);
+		piece[newPositionX][newPositionY] = piece[oldPositionX][oldPositionY];
+		piece[oldPositionX][oldPositionY] = null;
+	}
 	
 	@Override
 	public String toString() {
@@ -43,7 +47,7 @@ public class Board {
 					sb.append(piece[i][j] + "  ");
 				}
 				else {
-					sb.append("-  ");
+					sb.append("-   ");
 				}
 			}
 			sb.append("\n");
@@ -51,7 +55,7 @@ public class Board {
 		
 		char letra = 97;
 		for (int i = 0; i < 8; i++) {
-			sb.append("  " + letra);
+			sb.append("   " + letra);
 			letra++;
 		}
 		return sb.toString();
