@@ -14,8 +14,8 @@ public class Pawn extends ChessPiece {
 
 	@Override
 	public void movement(int x, int y) {
-			setPositionX(x);
-			setPositionY(y);
+		setPositionX(x);
+		setPositionY(y);
 	}
 	
 	@Override

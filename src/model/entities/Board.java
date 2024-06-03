@@ -36,6 +36,24 @@ public class Board {
 		piece[oldPositionX][oldPositionY] = null;
 	}
 	
+ 	public void CheckSourceException(int x, int y) {
+ 		if ( (x < 0 || x > 7) || (y < 0 || y > 7) ) {
+ 			throw new IndexOutOfBoundsException("The position on the source is out of the board.");
+ 		}
+ 		if (piece[x][y] == null) {
+ 			throw new NullPointerException("There is no piece on source position.");
+ 		}
+ 	}
+ 	
+ 	public void checkTargetPosition(int x, int y) {
+ 		if ( (x < 0 || x > 7) && (y < 0 || y > 7) ) {
+ 			throw new IndexOutOfBoundsException("The position on the target is out of the board.");
+ 		}
+ 		if (piece[x][y] == null) {
+ 			throw new NullPointerException("There is no piece on target position.");
+ 		}
+ 	}
+	
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
