@@ -1,9 +1,15 @@
 package aplication;
 
+import entities.Board;
+
 public class ChessMatch {
 
 	public static void main(String[] args) {
-		System.out.println("Agora vai: Olá, Mundo!");
+		
+		Board board = new Board();
+		
+		System.out.println(board.printBoard());
+		
 	}
 
 }
