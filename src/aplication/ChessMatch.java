@@ -7,8 +7,8 @@ public class ChessMatch {
 	public static void main(String[] args) {
 		
 		Board board = new Board();
-		
-		System.out.println(board.printBoard());
+		board.placePiece();
+		System.out.println(board);
 		
 	}
 
