@@ -23,7 +23,7 @@ public abstract class ChessPiece {
 		this.position = position;
 	}
 
-	//public abstract boolean hasValidMovement(Integer[] position);
+	public abstract boolean hasValidMovement(Integer[] position);
 	
-	//public abstract void pieceMovement(Integer[] position);
+	public abstract void pieceMovement(Integer[] position);
 }

@@ -9,6 +9,17 @@ public class Pawn extends ChessPiece {
 	}
 	
 	
+	@Override
+	public boolean hasValidMovement(Integer[] position) {
+		return true;
+	}
+	
+	@Override
+	public void pieceMovement(Integer[] position) {
+		if (hasValidMovement(position)) {
+			setPosition(position);
+		}
+	}
 	
 	
 	@Override

@@ -19,6 +19,13 @@ public class Board {
 		}
 	}
 	
+	public void refreshBoard(Integer[] oldPosition, Integer[] newPosition) {	
+		if ( (oldPosition[0] != boardPositions[oldPosition[0]][oldPosition[1]].getPosition()[0]) || (oldPosition[1] != boardPositions[oldPosition[0]][oldPosition[1]].getPosition()[1]) ) {
+			boardPositions[newPosition[0]][newPosition[1]] = boardPositions[oldPosition[0]][oldPosition[1]];
+			boardPositions[oldPosition[0]][oldPosition[1]] = null;
+		}
+	}
+	
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
